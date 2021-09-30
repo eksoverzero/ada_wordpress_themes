@@ -9,3 +9,8 @@ function twentytwentyonepointone_enqueue_styles() {
   );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwentyonepointone_enqueue_styles' );
+
+function twentytwentyonepointone_add_stylesheet() {
+    wp_enqueue_style( 'my-style', get_stylesheet_directory_uri() . '/style.css', false, '1.0', 'all' );
+}
+add_action( 'wp_enqueue_scripts', 'twentytwentyonepointone_add_stylesheet' );
